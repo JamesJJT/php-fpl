@@ -2,7 +2,9 @@
 
 namespace Jamesjjt\PhpFpl\Dto;
 
-class TeamsDto
+use Jamesjjt\PhpFpl\Contracts\DtoContract;
+
+class TeamsDto implements DtoContract
 {
     public function __construct(
         public int $id,
@@ -17,7 +19,7 @@ class TeamsDto
         public int $strength_defence_away
     ) {}
 
-    public static function create(array $array): TeamsDto
+    public static function fromArray(array $array): TeamsDto
     {
         return new self(
             $array['id'],

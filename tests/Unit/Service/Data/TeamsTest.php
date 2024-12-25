@@ -5,7 +5,7 @@ use Jamesjjt\PhpFpl\Enums\TeamID;
 use Jamesjjt\PhpFpl\Service\Data\Teams;
 
 it('returns an array of all teams', function () {
-    $teams = (new Teams())->getAllTeams();
+    $teams = (new Teams)->getAllTeams();
 
     foreach ($teams as $team) {
         expect($team)
@@ -27,7 +27,7 @@ it('returns an array of all teams', function () {
 });
 
 it('returns a TeamsDTO with the indivdual team data', function () {
-    $team = (new Teams())->getSpecificTeam(TeamID::Arsenal);
+    $team = (new Teams)->getSpecificTeam(TeamID::Arsenal);
 
     expect($team)
         ->toHaveKey('id')

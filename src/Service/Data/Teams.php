@@ -27,7 +27,7 @@ class Teams extends FPLService
         $formattedTeams = [];
 
         foreach ($teams as $team) {
-            $formattedTeams[] = TeamsDto::create($team);
+            $formattedTeams[] = TeamsDto::fromArray($team);
         }
 
         return $formattedTeams;
