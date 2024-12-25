@@ -30,7 +30,6 @@ it('returns a TeamsDTO with the indivdual team data', function () {
     $team = (new Teams())->getSpecificTeam(TeamID::Arsenal);
 
     expect($team)
-        ->dd()
         ->toHaveKey('id')
         ->toHaveKey('name')
         ->toHaveKey('short_name')
