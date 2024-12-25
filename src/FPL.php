@@ -9,11 +9,11 @@ use Jamesjjt\PhpFpl\Service\Data\Teams;
 /**
  * Gen enums file
  */
-//$fpl = (new Teams)->getTeams();
-//
-//foreach ($fpl as $team) {
-//    echo 'CASE '.$team['name']." = ".$team['id'].';'. PHP_EOL;
-//}
+$fpl = (new Teams)->getAllTeams();
+
+foreach ($fpl as $team) {
+    echo 'CASE '.$team->name." = ".$team->id.';'. PHP_EOL;
+}
 
 ///**
 // * Get players by team
@@ -24,7 +24,3 @@ use Jamesjjt\PhpFpl\Service\Data\Teams;
 //    var_dump($player);
 //    echo $player['web_name'].PHP_EOL;
 //}
-
-$fpl = (new Teams)->getSpecificTeam(TeamID::Arsenal);
-
-dd($fpl);
