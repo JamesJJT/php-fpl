@@ -50,7 +50,5 @@ class Teams extends FPLService
                 return $team;
             }
         }
-
-        throw new \Exception('Team not found');
     }
 }
