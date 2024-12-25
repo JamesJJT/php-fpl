@@ -19,19 +19,19 @@ class TeamsDto implements DtoContract
         public int $strength_defence_away
     ) {}
 
-    public static function fromArray(array $array): TeamsDto
+    public static function fromArray(array $data): TeamsDto
     {
         return new self(
-            $array['id'],
-            $array['name'],
-            $array['short_name'],
-            $array['strength'],
-            $array['strength_overall_home'],
-            $array['strength_overall_away'],
-            $array['strength_attack_home'],
-            $array['strength_attack_away'],
-            $array['strength_defence_home'],
-            $array['strength_defence_away']
+            $data['id'],
+            $data['name'],
+            $data['short_name'],
+            $data['strength'],
+            $data['strength_overall_home'],
+            $data['strength_overall_away'],
+            $data['strength_attack_home'],
+            $data['strength_attack_away'],
+            $data['strength_defence_home'],
+            $data['strength_defence_away']
         );
     }
 }
