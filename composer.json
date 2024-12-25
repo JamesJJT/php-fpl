@@ -2,11 +2,15 @@
     "name": "jamesjjt/php-fpl",
     "description": "PHP client to interact with the FPL API",
     "type": "library",
+    "require": {
+        "symfony/http-client": "^7.2"
+    },
     "require-dev": {
         "pestphp/pest": "^3.7",
         "phpstan/phpstan": "^2.0",
         "laravel/pint": "^1.18",
-        "mockery/mockery": "^1.6"
+        "mockery/mockery": "^1.6",
+        "symfony/var-dumper": "^7.2"
     },
     "autoload": {
         "psr-4": {
@@ -23,8 +27,5 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    },
-    "require": {
-        "symfony/http-client": "^7.2"
     }
 }

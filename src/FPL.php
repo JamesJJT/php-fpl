@@ -15,11 +15,16 @@ use Jamesjjt\PhpFpl\Service\Data\Teams;
 //    echo 'CASE '.$team['name']." = ".$team['id'].';'. PHP_EOL;
 //}
 
-/**
- * Get players by team
- */
-$fpl = (new Players)->getPlayersByTeam(TeamID::Liverpool);
+///**
+// * Get players by team
+// */
+//$fpl = (new Players)->getPlayersByTeam(TeamID::Liverpool);
+//
+//foreach ($fpl as $player) {
+//    var_dump($player);
+//    echo $player['web_name'].PHP_EOL;
+//}
 
-foreach ($fpl as $player) {
-    echo $player['web_name'].PHP_EOL;
-}
+$fpl = (new Teams)->getSpecificTeam(TeamID::Arsenal);
+
+dd($fpl);
