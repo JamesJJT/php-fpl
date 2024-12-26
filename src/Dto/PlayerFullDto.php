@@ -14,7 +14,7 @@ class PlayerFullDto implements DtoContract
         public int $code,
         public int $cost_change_event,
         public int $cost_change_event_fall,
-        public int $cost_change_start,
+        public float $cost_change_start,
         public int $cost_change_start_fall,
         public int $dreamteam_count,
         public int $element_type,
@@ -84,12 +84,12 @@ class PlayerFullDto implements DtoContract
         public string $direct_freekicks_text,
         public ?int $penalties_order,
         public string $penalties_text,
-        public int $expected_goals_per_90,
-        public int $saves_per_90,
-        public int $expected_assists_per_90,
-        public int $expected_goal_involvements_per_90,
-        public int $expected_goals_conceded_per_90,
-        public int $goals_conceded_per_90,
+        public float $expected_goals_per_90,
+        public float $saves_per_90,
+        public float $expected_assists_per_90,
+        public float $expected_goal_involvements_per_90,
+        public float $expected_goals_conceded_per_90,
+        public float $goals_conceded_per_90,
         public int $now_cost_rank,
         public int $now_cost_rank_type,
         public int $form_rank,
@@ -98,8 +98,8 @@ class PlayerFullDto implements DtoContract
         public int $points_per_game_rank_type,
         public int $selected_rank,
         public int $selected_rank_type,
-        public int $starts_per_90,
-        public int $clean_sheets_per_90
+        public float $starts_per_90,
+        public float $clean_sheets_per_90
     ) {}
 
     public static function fromArray(array $data): self
